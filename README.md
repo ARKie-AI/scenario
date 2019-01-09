@@ -1,6 +1,6 @@
 ## Arkie 基于场景的智能解决方案
 
-https://arkie-ai.github.io/scenario/
+演示链接: https://arkie-ai.github.io/scenario/
 
 ## API介绍
 - #### 版本 1.0.0
@@ -45,14 +45,13 @@ https://arkie-ai.github.io/scenario/
     | createdAt | string | 场景创建时间          |
     | updatedAt | string | 场景最后一次更新时间 |
 
-    `inputs : [ TextInput | ImageInput ]`
+    `inputs : [ TextInput | ImageInput ]`
 
     > ### TextInput
 
     | 参数        |  类型  | 说明             |
     | ----------- | :----: | ---------------- |
     | id          | string | 输入ID           |
-    | name        | string | 输入名称         |
     | type        | string | 输入类型         |
     | label       | string | 输入提示         |
     | placeholder | string | 默认输入内容     |
@@ -65,11 +64,8 @@ https://arkie-ai.github.io/scenario/
     | 参数      |  类型  | 说明             |
     | --------- | :----: | ---------------- |
     | id        | string | 输入ID           |
-    | name      | string | 输入名称         |
     | type      | string | 输入类型         |
     | label     | string | 输入提示         |
-    | source    | string | 来源            |
-    | imageType | string | 用途             |
     | url       | string | 图片地址         |
     | groupId   | string | 所属输入类别ID   |
     | groupName | string | 所属输入类别名称 |
@@ -93,7 +89,6 @@ https://arkie-ai.github.io/scenario/
     "inputs": [
       {
         "id": "55e8ff47-05bc-4caf-84e0-2d39d14b9771",
-        "name": "heading",
         "label": "标题",
         "type": "text",
         "groupId": "cb8d744b-87c8-489e-b034-776c4982e7bd",
@@ -103,7 +98,6 @@ https://arkie-ai.github.io/scenario/
       },
       {
         "id": "51b808a7-57c7-4b25-ba5c-1acfd062858e",
-        "name": "subtext",
         "label": "副标题",
         "type": "text",
         "groupId": "cb8d744b-87c8-489e-b034-776c4982e7bd",
@@ -113,13 +107,10 @@ https://arkie-ai.github.io/scenario/
       },
       {
         "id": "eb1d571c-660e-483c-8947-da6eda741df1",
-        "name": "logo",
         "label": "LOGO",
         "type": "image",
         "groupId": "cb8d744b-87c8-489e-b034-776c4982e7bd",
         "groupName": "ATF信息",
-        "source": "notDisplay",
-        "imageType": "logo",
         "url": ""
       }
     ]
@@ -180,7 +171,6 @@ https://arkie-ai.github.io/scenario/
     | 参数          |  类型  | 说明             |
     | ------------- | :----: | ---------------- |
     | `id`          | string | 输入ID           |
-    | `name`        | string | 输入名称         |
     | `type`        | string | 输入类型         |
     | `label`       | string | 输入提示         |
     | `placeholder` | string | 默认输入内容     |
@@ -193,11 +183,8 @@ https://arkie-ai.github.io/scenario/
     | 参数        |  类型  | 说明             |
     | ----------- | :----: | ---------------- |
     | `id`        | string | 输入ID           |
-    | `name`      | string | 输入名称         |
     | `type`      | string | 输入类型         |
     | `label`     | string | 输入提示         |
-    | `source`    | string | 来源            |
-    | `imageType` | string | 用途             |
     | `url`       | string | 图片地址         |
     | `groupId`   | string | 所属输入类别ID   |
     | `groupName` | string | 所属输入类别名称 |
@@ -256,27 +243,21 @@ https://arkie-ai.github.io/scenario/
     | 参数   | 必须  |  类型  | 说明     |
     | ------ | :---: | :----: | -------- |
     | `id`   |   √   | string | 输入ID   |
-    | `name` |   √   | string | 输入名称 |
     | `type` |   √   | string | 输入类型 |
     | `text` |   √   | string | 输入内容 |
 
-    ***`id name type` 值由场景数据的 `inputs` 获取， 不可更改***
+    ***`id type` 值由场景数据的 `inputs` 获取， 不可更改***
 
     > ### ImageInput
 
     | 参数        | 必须  |  类型  | 说明     |
     | ----------- | :---: | :----: | -------- |
     | `id`        |   √   | string | 输入ID   |
-    | `name`      |   √   | string | 输入名称 |
     | `type`      |   √   | string | 输入类型 |
-    | `source`    |   √   | string | 来源    |
-    | `imageType` |   √   | string | 用途     |
     | `url`       |   √   | string | 图片地址 |
 
-    `id name type imageType` 值由场景数据的 `inputs` 获取， 不可更改
+    `id type` 值由场景数据的 `inputs` 获取， 不可更改
 
-    `source : byUserAppointed | notDisplay | content`    
-     ***使用上传图片时使用*** -  `byUserAppointed`
 #
 
 #### 响应
@@ -308,7 +289,6 @@ https://arkie-ai.github.io/scenario/
     | 参数          |  类型  | 说明             |
     | ------------- | :----: | ---------------- |
     | `id`          | string | 输入ID           |
-    | `name`        | string | 输入名称         |
     | `type`        | string | 输入类型         |
     | `label`       | string | 输入提示         |
     | `placeholder` | string | 默认输入内容     |
@@ -321,11 +301,8 @@ https://arkie-ai.github.io/scenario/
     | 参数        |  类型  | 说明             |
     | ----------- | :----: | ---------------- |
     | `id`        | string | 输入ID           |
-    | `name`      | string | 输入名称         |
     | `type`      | string | 输入类型         |
     | `label`     | string | 输入提示         |
-    | `source`    | string | 来源            |
-    | `imageType` | string | 用途             |
     | `url`       | string | 图片地址         |
     | `groupId`   | string | 所属输入类别ID   |
     | `groupName` | string | 所属输入类别名称 |
@@ -383,7 +360,6 @@ https://arkie-ai.github.io/scenario/
     | 参数   | 必须  |  类型  | 说明     |
     | ------ | :---: | :----: | -------- |
     | `id`   |   √   | string | 输入ID   |
-    | `name` |   √   | string | 输入名称 |
     | `type` |   √   | string | 输入类型 |
     | `text` |   √   | string | 输入内容 |
 
@@ -394,16 +370,11 @@ https://arkie-ai.github.io/scenario/
     | 参数        | 必须  |  类型  | 说明     |
     | ----------- | :---: | :----: | -------- |
     | `id`        |   √   | string | 输入ID   |
-    | `name`      |   √   | string | 输入名称 |
     | `type`      |   √   | string | 输入类型 |
-    | `source`    |   √   | string | 来源    |
-    | `imageType` |   √   | string | 用途     |
     | `url`       |   √   | string | 图片地址 |
 
-    `id name type imageType` 值由场景数据的 `inputs` 获取， 不可更改
+    `id type` 值由场景数据的 `inputs` 获取， 不可更改
 
-    `source : byUserAppointed | notDisplay | content`    
-     ***使用上传图片时使用*** -  `byUserAppointed`
 #
 
 #### 响应
@@ -435,7 +406,6 @@ https://arkie-ai.github.io/scenario/
     | 参数          |  类型  | 说明             |
     | ------------- | :----: | ---------------- |
     | `id`          | string | 输入ID           |
-    | `name`        | string | 输入名称         |
     | `type`        | string | 输入类型         |
     | `label`       | string | 输入提示         |
     | `placeholder` | string | 默认输入内容     |
@@ -448,11 +418,8 @@ https://arkie-ai.github.io/scenario/
     | 参数        |  类型  | 说明             |
     | ----------- | :----: | ---------------- |
     | `id`        | string | 输入ID           |
-    | `name`      | string | 输入名称         |
     | `type`      | string | 输入类型         |
     | `label`     | string | 输入提示         |
-    | `source`    | string | 来源            |
-    | `imageType` | string | 用途             |
     | `url`       | string | 图片地址         |
     | `groupId`   | string | 所属输入类别ID   |
     | `groupName` | string | 所属输入类别名称 |
@@ -642,8 +609,11 @@ https://arkie-ai.github.io/scenario/
 - ### 请求参数
 
 
-  | 参数 | 必须  | 类型  | 说明 |
-  | :--- | :---: | :---: | ---- |
+  | 参数     | 必须  |  类型  | 说明               |
+  | :------- | :---: | :----: | ------------------ |
+  | name     |   √   | string | 图片名称           |
+  | minetype |   √    | string | 文件类型           |
+  | dataUrl  |   √    | string | 图片base64文件格式 |
 
 #
 
